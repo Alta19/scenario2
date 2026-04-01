@@ -34,7 +34,7 @@ The test runs through the following steps automatically:
 ### 1. Clone the repository
 
 ```bash
-git clone 
+git clone https://github.com/Alta19/scenario2.git
 cd scenario2
 ```
 
