@@ -48,7 +48,7 @@ All test parameters are driven from this file. No hardcoded values exist in the 
 | `periplus.password` | Account password | `yourpassword` |
 | `periplus.bookTitle` | Full title of the book to add | `Kingdom Come: DC Compact Comics Edition` |
 | `periplus.baseUrl` | Base URL of the store | `https://www.periplus.com` |
-| `periplus.useLocalProfile` | Use persistent Chrome profile (`Y` or `N`) | `Y` |
+| `periplus.useLocalProfile` | Use persistent Chrome profile (`Y` or `N`) | `N` |
 
 ### 3. Run the test
 
@@ -64,7 +64,7 @@ Or use the **Test Runner for Java** beaker icon in VS Code.
 
 This is the most important setting. It controls how Chrome launches.
 
-### `Y` — Local Profile Mode (Recommended)
+### `Y` — Local Profile Mode
 
 Chrome launches using a persistent profile stored in the `local-chrome-profile/` folder inside the project. This folder is automatically created on first run.
 
@@ -89,7 +89,7 @@ Cloudflare will likely detect the automated bot signature and block access with 
 If the test fails with an `HTTP 500` or is stuck on a Cloudflare challenge screen:
 
 1. **Restart your router/modem** to get a new IP address — repeated failed bot attempts can flag your IP
-2. Switch to `useLocalProfile=Y` if not already using it //reccomended to use 'N'
+2. Switch to `useLocalProfile=Y` if you have a persistent Chrome profile set up
 3. Manually open the `local-chrome-profile/` Chrome instance, browse Periplus normally for a few minutes, then re-run the test
 4. Ensure your Periplus account credentials are valid and the account is not locked
 
