@@ -74,6 +74,12 @@ public class CartTest {
         String baseUrl = config.getProperty("periplus.baseUrl");
         
         // ValidateTestParams
+        if (email == null || email.trim().isEmpty()) {
+            Assert.fail("CRITICAL ERROR: 'periplus.email' missing from config.properties!");
+        }
+        if (password == null || password.trim().isEmpty()) {
+            Assert.fail("CRITICAL ERROR: 'periplus.password' missing from config.properties!");
+        }
         if (bookTitle == null || bookTitle.trim().isEmpty()) {
             Assert.fail("CRITICAL ERROR: 'periplus.bookTitle' missing from config.properties!");
         }
